@@ -87,7 +87,7 @@ public class LoginPage extends javax.swing.JFrame {
                 PasswordLoginFocusLost(evt);
             }
         });
-        getContentPane().add(PasswordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 490, 450, 30));
+        getContentPane().add(PasswordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 495, 440, -1));
 
         LoginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Login Button.png"))); // NOI18N
         LoginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -121,7 +121,7 @@ public class LoginPage extends javax.swing.JFrame {
                 LoginUsernameOrEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(LoginUsernameOrEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 400, 450, 40));
+        getContentPane().add(LoginUsernameOrEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 410, 440, -1));
 
         BackToSignUp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Back to Sign Up Button.png"))); // NOI18N
         BackToSignUp.setText(" ");
@@ -140,6 +140,18 @@ public class LoginPage extends javax.swing.JFrame {
         getContentPane().add(BackToSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(1165, 695, 100, -1));
 
         ForgotPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Forgot Password_.png"))); // NOI18N
+        ForgotPassword.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ForgotPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ForgotPasswordMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ForgotPasswordMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ForgotPasswordMouseExited(evt);
+            }
+        });
         getContentPane().add(ForgotPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(818, 695, 120, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Login Form.png"))); // NOI18N
@@ -157,7 +169,6 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void LoginUsernameOrEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginUsernameOrEmailActionPerformed
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_LoginUsernameOrEmailActionPerformed
 
     private void LoginUsernameOrEmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_LoginUsernameOrEmailFocusGained
@@ -303,11 +314,39 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void BackToSignUpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToSignUpMouseEntered
         // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(1,1,1,1, new Color(219,123,93));
+        BackToSignUp.setBorder(IconBorder);
+        BackToSignUp.setForeground(new Color(219,123,93));
     }//GEN-LAST:event_BackToSignUpMouseEntered
 
     private void BackToSignUpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackToSignUpMouseExited
         // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(0,0,0,0, Color.white);
+        BackToSignUp.setBorder(IconBorder);
+        BackToSignUp.setForeground(Color.white);
     }//GEN-LAST:event_BackToSignUpMouseExited
+
+    private void ForgotPasswordMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ForgotPasswordMouseEntered
+        // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(1,1,1,1, new Color(219,123,93));
+        ForgotPassword.setBorder(IconBorder);
+        ForgotPassword.setForeground(new Color(219,123,93));
+    }//GEN-LAST:event_ForgotPasswordMouseEntered
+
+    private void ForgotPasswordMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ForgotPasswordMouseExited
+        // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(0,0,0,0, Color.white);
+        ForgotPassword.setBorder(IconBorder);
+        ForgotPassword.setForeground(Color.white);
+    }//GEN-LAST:event_ForgotPasswordMouseExited
+
+    private void ForgotPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ForgotPasswordMouseClicked
+        // TODO add your handling code here:
+        dispose();
+        ForgotPass forgot = new ForgotPass();
+        forgot.setLocationRelativeTo(null);
+        forgot.setVisible(true);
+    }//GEN-LAST:event_ForgotPasswordMouseClicked
 
     /**
      * @param args the command line arguments

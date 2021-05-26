@@ -34,7 +34,7 @@ public class SignUp extends javax.swing.JFrame {
         UsernameSignUp = new javax.swing.JTextField();
         EmailSignUp = new javax.swing.JTextField();
         PasswordSignUp = new javax.swing.JPasswordField();
-        AnswerQuestion = new javax.swing.JTextField();
+        AnswerQuestionSign = new javax.swing.JTextField();
         AddressSignUp = new javax.swing.JTextField();
         Back = new javax.swing.JLabel();
         SignUpButton = new javax.swing.JLabel();
@@ -101,24 +101,24 @@ public class SignUp extends javax.swing.JFrame {
         });
         getContentPane().add(PasswordSignUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, 710, 30));
 
-        AnswerQuestion.setBackground(new java.awt.Color(242, 218, 218));
-        AnswerQuestion.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
-        AnswerQuestion.setBorder(null);
-        AnswerQuestion.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        AnswerQuestion.addFocusListener(new java.awt.event.FocusAdapter() {
+        AnswerQuestionSign.setBackground(new java.awt.Color(242, 218, 218));
+        AnswerQuestionSign.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
+        AnswerQuestionSign.setBorder(null);
+        AnswerQuestionSign.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        AnswerQuestionSign.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                AnswerQuestionFocusGained(evt);
+                AnswerQuestionSignFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                AnswerQuestionFocusLost(evt);
+                AnswerQuestionSignFocusLost(evt);
             }
         });
-        AnswerQuestion.addActionListener(new java.awt.event.ActionListener() {
+        AnswerQuestionSign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AnswerQuestionActionPerformed(evt);
+                AnswerQuestionSignActionPerformed(evt);
             }
         });
-        getContentPane().add(AnswerQuestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, 710, 30));
+        getContentPane().add(AnswerQuestionSign, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, 710, 30));
 
         AddressSignUp.setBackground(new java.awt.Color(242, 218, 218));
         AddressSignUp.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
@@ -180,9 +180,9 @@ public class SignUp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void AnswerQuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnswerQuestionActionPerformed
+    private void AnswerQuestionSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnswerQuestionSignActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_AnswerQuestionActionPerformed
+    }//GEN-LAST:event_AnswerQuestionSignActionPerformed
 
     private void NameSignUpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_NameSignUpFocusGained
         // TODO add your handling code here:
@@ -268,26 +268,26 @@ public class SignUp extends javax.swing.JFrame {
         PasswordSignUp.setBorder(null);
     }//GEN-LAST:event_PasswordSignUpFocusLost
 
-    private void AnswerQuestionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_AnswerQuestionFocusGained
+    private void AnswerQuestionSignFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_AnswerQuestionSignFocusGained
         // TODO add your handling code here:
-        String AnswerValue = AnswerQuestion.getText();
+        String AnswerValue = AnswerQuestionSign.getText();
         
         if(AnswerValue.trim().toLowerCase().equals(("answer"))){
-            AnswerQuestion.setText("");
-            AnswerQuestion.setForeground(Color.black);
+            AnswerQuestionSign.setText("");
+            AnswerQuestionSign.setForeground(Color.black);
         }
-    }//GEN-LAST:event_AnswerQuestionFocusGained
+    }//GEN-LAST:event_AnswerQuestionSignFocusGained
 
-    private void AnswerQuestionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_AnswerQuestionFocusLost
+    private void AnswerQuestionSignFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_AnswerQuestionSignFocusLost
         // TODO add your handling code here:
-        String AnswerValue = AnswerQuestion.getText();
+        String AnswerValue = AnswerQuestionSign.getText();
         
         if(AnswerValue.trim().toLowerCase().equals(("answer"))||AnswerValue.trim().toLowerCase().equals("")){
-            AnswerQuestion.setText("Answer");
-            AnswerQuestion.setForeground(new Color(153,153,153));
+            AnswerQuestionSign.setText("Answer");
+            AnswerQuestionSign.setForeground(new Color(153,153,153));
         }
-        AnswerQuestion.setBorder(null); 
-    }//GEN-LAST:event_AnswerQuestionFocusLost
+        AnswerQuestionSign.setBorder(null); 
+    }//GEN-LAST:event_AnswerQuestionSignFocusLost
 
     private void AddressSignUpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_AddressSignUpFocusGained
         // TODO add your handling code here:
@@ -352,16 +352,16 @@ public class SignUp extends javax.swing.JFrame {
         String username = UsernameSignUp.getText();
         String email = EmailSignUp.getText();
         String password = String.valueOf(PasswordSignUp.getPassword());
-        String answer = AnswerQuestion.getText();
+        String answerQ = AnswerQuestionSign.getText();
         String address = AddressSignUp.getText();
         String securityQuestion = (String)jComboBox1.getSelectedItem();
-        if(name.equals("")||username.equals("")||email.equals("")||password.equals("")||answer.equals("")||address.equals("")||securityQuestion.equals("")){
+        if(name.equals("")||username.equals("")||email.equals("")||password.equals("")||answerQ.equals("")||address.equals("")||securityQuestion.equals("")){
             JOptionPane.showMessageDialog(null, "All Field is Required", "Error", JOptionPane.ERROR_MESSAGE);
         }
         else
         {
             String Query;
-            Query = "insert into admin values('"+name+"', '"+username+"', '"+email+"', '"+password+"', '"+answer+"', '"+address+"', '"+securityQuestion+"', 'false')";
+            Query = "insert into admin values('"+name+"', '"+username+"', '"+email+"', '"+password+"', '"+securityQuestion+"', '"+answerQ+"', '"+address+"', 'false')";
             InsertUpdateDelete.setData(Query, "Registered Succcesfully");
             setVisible(false);
             new SignUp().setVisible(true);
@@ -405,7 +405,7 @@ public class SignUp extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AddressSignUp;
-    private javax.swing.JTextField AnswerQuestion;
+    private javax.swing.JTextField AnswerQuestionSign;
     private javax.swing.JLabel Back;
     private javax.swing.JTextField EmailSignUp;
     private javax.swing.JTextField NameSignUp;

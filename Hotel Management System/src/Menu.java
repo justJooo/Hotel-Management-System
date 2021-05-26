@@ -79,11 +79,25 @@ public class Menu extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 CheckOutMouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CheckOutMouseExited(evt);
+            }
         });
         getContentPane().add(CheckOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 510, -1, -1));
 
         CustomerBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Customer Bill.png"))); // NOI18N
         CustomerBill.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CustomerBill.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CustomerBillMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CustomerBillMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CustomerBillMouseExited(evt);
+            }
+        });
         getContentPane().add(CustomerBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 510, -1, -1));
 
         Close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Exit Button.png"))); // NOI18N
@@ -110,14 +124,24 @@ public class Menu extends javax.swing.JFrame {
 
     private void ManageRoomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageRoomMouseClicked
         // TODO add your handling code here:
+        dispose();
+        ManageRoom mng = new ManageRoom();
+        mng.setLocationRelativeTo(null);
+        mng.setVisible(true);
     }//GEN-LAST:event_ManageRoomMouseClicked
 
     private void ManageRoomMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageRoomMouseEntered
         // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(1,1,1,1, new Color(255, 225, 255));
+        ManageRoom.setBorder(IconBorder);
+        ManageRoom.setForeground(new Color(255, 225, 255));
     }//GEN-LAST:event_ManageRoomMouseEntered
 
     private void ManageRoomMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageRoomMouseExited
         // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(0,0,0,0, Color.white);
+        ManageRoom.setBorder(IconBorder);
+        ManageRoom.setForeground(Color.white);
     }//GEN-LAST:event_ManageRoomMouseExited
 
     private void CheckInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckInMouseClicked
@@ -126,10 +150,16 @@ public class Menu extends javax.swing.JFrame {
 
     private void CheckInMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckInMouseEntered
         // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(1,1,1,1, new Color(255, 225, 255));
+        CheckIn.setBorder(IconBorder);
+        CheckIn.setForeground(new Color(255, 225, 255));
     }//GEN-LAST:event_CheckInMouseEntered
 
     private void CheckInMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckInMouseExited
         // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(0,0,0,0, Color.white);
+        CheckIn.setBorder(IconBorder);
+        CheckIn.setForeground(Color.white);
     }//GEN-LAST:event_CheckInMouseExited
 
     private void CheckOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckOutMouseClicked
@@ -138,6 +168,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void CheckOutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckOutMouseEntered
         // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(1,1,1,1, new Color(255, 225, 255));
+        CheckOut.setBorder(IconBorder);
+        CheckOut.setForeground(new Color(255, 225, 255));
     }//GEN-LAST:event_CheckOutMouseEntered
 
     private void CloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseMouseClicked
@@ -169,6 +202,31 @@ public class Menu extends javax.swing.JFrame {
         Close.setBorder(IconBorder);
         Close.setForeground(Color.white);
     }//GEN-LAST:event_CloseMouseExited
+
+    private void CustomerBillMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CustomerBillMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustomerBillMouseClicked
+
+    private void CustomerBillMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CustomerBillMouseEntered
+        // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(1,1,1,1, new Color(255, 225, 255));
+        CustomerBill.setBorder(IconBorder);
+        CustomerBill.setForeground(new Color(255, 225, 255));
+    }//GEN-LAST:event_CustomerBillMouseEntered
+
+    private void CustomerBillMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CustomerBillMouseExited
+        // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(0,0,0,0, Color.white);
+        CustomerBill.setBorder(IconBorder);
+        CustomerBill.setForeground(Color.white);
+    }//GEN-LAST:event_CustomerBillMouseExited
+
+    private void CheckOutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckOutMouseExited
+        // TODO add your handling code here:
+        Border IconBorder = BorderFactory.createMatteBorder(0,0,0,0, Color.white);
+        CheckOut.setBorder(IconBorder);
+        CheckOut.setForeground(Color.white);
+    }//GEN-LAST:event_CheckOutMouseExited
 
     /**
      * @param args the command line arguments

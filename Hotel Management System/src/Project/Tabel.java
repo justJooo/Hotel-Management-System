@@ -22,7 +22,13 @@ public class Tabel{
         {
             conn = ConnectionProvider.getConn();
             st = conn.createStatement();
-            st.executeUpdate("create table admin(id_admin int(11) primary key auto_increment, name varchar(50) not null, username varchar(50) not null, email varchar(50) not null, password varchar(50) not null, securityQuestion varchar(100) not null, answer varchar(100) not null, address varchar(100) not null, status varchar(20) not null)");
+            /*Note
+            If you wanna create a new table, just deactivate the st.executeUpdate and put your
+            new SQL syntax to make the new tables
+            */
+
+            //st.executeUpdate("create table admin(name varchar(50) not null, username varchar(50) not null, email varchar(50) not null, password varchar(50) not null, securityQuestion varchar(100) not null, answer varchar(100) not null, address varchar(100) not null, status varchar(20) not null)");
+            st.executeUpdate("create table room(roomNumber INT(11), roomType varchar(100), bed varchar(100), price varchar(20), status varchar(20))");
             JOptionPane.showMessageDialog(null, "Table Succesfully Created");
         }
         catch(Exception e)

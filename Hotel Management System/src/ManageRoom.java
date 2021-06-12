@@ -316,7 +316,7 @@ public class ManageRoom extends javax.swing.JFrame {
         }
         catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null, "Insertion Failed");
+            JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_formComponentShown
 
@@ -328,7 +328,7 @@ public class ManageRoom extends javax.swing.JFrame {
         String RoomPrice = Price.getText();
         String RoomStatus = (String)Status.getSelectedItem();
         String RoomFeature = Feature.getText();
-        if(RoomNum.equals("")||RoomType.equals("")||BedType.equals("")||RoomPrice.equals("")||RoomStatus.equals("")||RoomFeature.equals("")){
+        if(RoomNum.equals("")||RoomTypes.equals("")||BedType.equals("")||RoomPrice.equals("")||RoomStatus.equals("")||RoomFeature.equals("")){
             JOptionPane.showMessageDialog(null, "All Field is Required", "Error", JOptionPane.ERROR_MESSAGE);
         }
         else

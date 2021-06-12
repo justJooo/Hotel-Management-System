@@ -77,7 +77,7 @@ public class LoginPage extends javax.swing.JFrame {
         getContentPane().add(Close, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 0, 30, 30));
 
         PasswordLogin.setBackground(new java.awt.Color(242, 218, 218));
-        PasswordLogin.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
+        PasswordLogin.setFont(new java.awt.Font("Segoe UI Historic", 0, 20)); // NOI18N
         PasswordLogin.setBorder(null);
         PasswordLogin.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -87,7 +87,7 @@ public class LoginPage extends javax.swing.JFrame {
                 PasswordLoginFocusLost(evt);
             }
         });
-        getContentPane().add(PasswordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 495, 440, -1));
+        getContentPane().add(PasswordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 492, 440, 30));
 
         LoginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Login Button.png"))); // NOI18N
         LoginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -105,7 +105,7 @@ public class LoginPage extends javax.swing.JFrame {
         getContentPane().add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 570, 170, 60));
 
         LoginUsernameOrEmail.setBackground(new java.awt.Color(242, 218, 218));
-        LoginUsernameOrEmail.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
+        LoginUsernameOrEmail.setFont(new java.awt.Font("Segoe UI Historic", 0, 20)); // NOI18N
         LoginUsernameOrEmail.setBorder(null);
         LoginUsernameOrEmail.setPreferredSize(new java.awt.Dimension(59, 21));
         LoginUsernameOrEmail.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -121,7 +121,7 @@ public class LoginPage extends javax.swing.JFrame {
                 LoginUsernameOrEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(LoginUsernameOrEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 410, 440, -1));
+        getContentPane().add(LoginUsernameOrEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 400, 440, 40));
 
         BackToSignUp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Back to Sign Up Button.png"))); // NOI18N
         BackToSignUp.setText(" ");
@@ -267,7 +267,7 @@ public class LoginPage extends javax.swing.JFrame {
                 new Menu().setVisible(true);
         }
         else{
-            ResultSet rs = Select.getData("select *from admin where username ='"+username+"' or email='"+email+"' and password='"+password+"';");
+            ResultSet rs = Select.getData("select *from admin where password ='"+password+"' and (username = '"+username+"' or email='"+email+"');");
             try
             {
                 if(rs.next())

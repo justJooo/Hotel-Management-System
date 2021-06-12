@@ -30,7 +30,7 @@ public class CheckIn extends javax.swing.JFrame {
         
         //mengatur tanggal check in menjadi tanggal hari ini
         dateField.setEditable(true);
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd");
         Calendar cal = Calendar.getInstance();
         dateField.setText(format.format(cal.getTime()));
         dateField.setFont(new Font("Segoe UI Historic", Font.PLAIN, 30));
@@ -137,7 +137,7 @@ public class CheckIn extends javax.swing.JFrame {
 
         roomTypeField.setBackground(new java.awt.Color(242, 218, 218));
         roomTypeField.setFont(new java.awt.Font("Segoe UI Historic", 0, 18)); // NOI18N
-        roomTypeField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VIP", "VVIP", "Connected", "AC", "Non-AC" }));
+        roomTypeField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VIP", "VVIP", "Connected" }));
         roomTypeField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(242, 218, 218), 5));
         roomTypeField.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         roomTypeField.addActionListener(new java.awt.event.ActionListener() {

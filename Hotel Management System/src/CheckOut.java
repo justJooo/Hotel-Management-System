@@ -234,7 +234,6 @@ public class CheckOut extends javax.swing.JFrame {
         
         roomNum = RoomNumber.getText();
         Query="update customer set numberOfDays='"+numberOfDays+"', totalAmount='"+totalAmount+"', checkOut='"+checkOutDate+"' where id='"+id+"'";
-        
         InsertUpdateDelete.setData(Query,"");
         Query="update room set Status = 'Available' where roomNumber='"+roomNum+"'";
         InsertUpdateDelete.setData(Query,"");
@@ -323,7 +322,7 @@ public class CheckOut extends javax.swing.JFrame {
                 RoomPrice.setText(rs.getString(12));
                 CheckInDate.setText(rs.getString(8));
 
-                SimpleDateFormat myFormat= new SimpleDateFormat("dd/MM/yyyy");
+                SimpleDateFormat myFormat= new SimpleDateFormat("YYYY-MM-dd");
                 Calendar cal=Calendar.getInstance();
 
                 CheckOutDate.setText(myFormat.format(cal.getTime()));
